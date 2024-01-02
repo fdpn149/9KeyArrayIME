@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/gridLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -63,9 +64,10 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="1"
-                android:textColor="@color/white" />
-            android:textSize="20sp" />
+                android:singleLine="false"
+                android:text="ABC"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/button3"
@@ -74,7 +76,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="2"
+                android:text="DEF"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -85,7 +87,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="3"
+                android:text="GHI"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -123,7 +125,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="4"
+                android:text="JKL"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -134,7 +136,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="5"
+                android:text="MNO"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -145,7 +147,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="6"
+                android:text="PQR"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -183,7 +185,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="7"
+                android:text="STU"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -194,7 +196,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="8"
+                android:text="VWX"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -205,7 +207,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="9"
+                android:text="@string/yz"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
