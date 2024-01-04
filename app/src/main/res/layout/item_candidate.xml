@@ -2,8 +2,11 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/candidateTextView"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="?android:attr/selectableItemBackground"
     android:clickable="true"
-    android:padding="8dp"
-    android:textColor="@android:color/primary_text_dark" />
+    android:paddingLeft="8sp"
+    android:paddingRight="8sp"
+    android:textAlignment="viewStart"
+    android:textColor="@android:color/primary_text_dark"
+    android:textSize="20sp" />

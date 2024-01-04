@@ -7,28 +7,28 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.Button
 import android.widget.FrameLayout
-import kotlin.math.abs
 
-class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
-	BaseKeyboard(baseView, R.id.array, inputMethod) {
+class EnglishKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
+	BaseKeyboard(baseView, R.id.english, inputMethod) {
 	/*Last Touch Position*/
 	private var lastTouchX = 0.0f
 	private var lastTouchY = 0.0f
 
 	/*Handler*/
 	private val handler = Handler(Looper.getMainLooper())
-	
+
+	/*Shift*/
+	private var shift = false
+
 	init {
-		candidateLib.loadWords(R.raw.words)
-		candidateLib.loadMapping(R.raw.mapping)
-		candidateLib.loadFunKeyMap(mapOf(
-			"⏎" to KeyEvent.KEYCODE_NUMPAD_ENTER,
-			" " to KeyEvent.KEYCODE_SPACE,
-			"↹" to KeyEvent.KEYCODE_TAB,
-			"←" to KeyEvent.KEYCODE_DPAD_LEFT,
-			"→" to KeyEvent.KEYCODE_DPAD_RIGHT,
-			"⇧" to KeyEvent.KEYCODE_SHIFT_LEFT
-		))
+		candidateLib.loadFunKeyMap(
+			mapOf(
+				"⏎" to KeyEvent.KEYCODE_NUMPAD_ENTER,
+				" " to KeyEvent.KEYCODE_SPACE,
+				"↹" to KeyEvent.KEYCODE_TAB,
+				"⇧" to KeyEvent.KEYCODE_SHIFT_LEFT,
+			)
+		)
 	}
 
 	override fun setupButtons() {
@@ -36,7 +36,12 @@ class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 			val buttonId =
 				inputMethod.resources.getIdentifier("button$i", "id", inputMethod.packageName)
 			val button = view.findViewById<Button>(buttonId)
-			button?.setOnTouchListener { view: View, event: MotionEvent -> onButtonTouch(event, button) }
+			button?.setOnTouchListener { view: View, event: MotionEvent ->
+				onButtonTouch(
+					event,
+					button
+				)
+			}
 		}
 
 	}
@@ -50,9 +55,14 @@ class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 					"⌫" -> handler.postDelayed(backKeyDown, DELAY_MILLIS)
 					"\uD83C\uDF10" -> {}
 					"BUTTON" -> {}
+					"⇧" -> {
+						candidateLib.getKeyValue(value)?.let { sendDownKeyEvent(it, false) }
+						shift = true
+					}
+
 					else -> candidateLib.getKeyValue(value)?.let { sendDownKeyEvent(it, false) }
 				}
-				
+
 				lastTouchX = event.x
 				lastTouchY = event.y
 			}
@@ -63,8 +73,8 @@ class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 				val deltaY = event.y - lastTouchY
 				lastTouchX = 0.0f
 				lastTouchY = 0.0f
-				if (value[0].isDigit()) {
-					when(getSwipeDirection(deltaX, deltaY)) {
+				if (value.length > 2) {
+					when (getSwipeDirection(deltaX, deltaY)) {
 						SwipeDirection.UP -> swipeUp(value)
 						SwipeDirection.DOWN -> swipeDown(value)
 						SwipeDirection.LEFT -> swipeLeft(value)
@@ -75,6 +85,11 @@ class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 					"⌫" -> handler.removeCallbacks(backKeyDown)
 					"\uD83C\uDF10" -> changeMode()
 					"BUTTON" -> {}
+					"⇧" -> {
+						candidateLib.getKeyValue(value)?.let { sendUpKeyEvent(it, false) }
+						shift = false
+					}
+
 					else -> candidateLib.getKeyValue(value)?.let { sendUpKeyEvent(it, false) }
 				}
 			}
@@ -88,24 +103,48 @@ class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 			handler.postDelayed(this, DELAY_MILLIS * 2)
 		}
 	}
-	
+
 	private fun swipeUp(value: String) {
-		updateInputTextView("$value↑")
+
 	}
 
 	private fun swipeDown(value: String) {
-		updateInputTextView("$value↓")
+		if (value.length < 4) return
+		if (value[0].isLetter()) {
+			sendDownKeyEvent(value[2].code - 36, shift)
+			sendUpKeyEvent(value[2].code - 36, shift)
+		}
+		else {
+			commitText(value[2].toString())
+		}
 	}
 
 	private fun swipeLeft(value: String) {
-		sendDownKeyEvent(value[0].code - 41, false)
+		if (value[0].isLetter()) {
+			sendDownKeyEvent(value[0].code - 36, shift)
+			sendUpKeyEvent(value[0].code - 36, shift)
+		}
+		else {
+			commitText(value[0].toString())
+		}
 	}
 
 	private fun swipeRight(value: String) {
-		updateInputTextView("w$value")
+		val pos = if (value.length > 3) 3 else 2
+		if (value[0].isLetter()) {
+			sendDownKeyEvent(value[pos].code - 36, shift)
+			sendUpKeyEvent(value[pos].code - 36, shift)
+		} else {
+			commitText(value[pos].toString())
+		}
 	}
 
 	private fun regularClick(value: String) {
-		updateInputTextView("$value-")
+		if (value[0].isLetter()) {
+			sendDownKeyEvent(value[1].code - 36, shift)
+			sendUpKeyEvent(value[1].code - 36, shift)
+		} else {
+			commitText(value[1].toString())
+		}
 	}
 }

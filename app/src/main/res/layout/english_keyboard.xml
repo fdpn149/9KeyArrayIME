@@ -7,34 +7,35 @@
     android:layout_height="match_parent"
 
     android:layout_gravity="center"
-    android:background="@color/black">
+    android:background="#00000000">
 
     <TextView
         android:id="@+id/inputTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"
+        android:background="@color/input_view"
         android:gravity="center"
-        android:text=""
-        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/candidateRecyclerView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/candidateRecyclerView"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="40sp"
         android:background="@color/black"
-        android:paddingTop="16dp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="0dp"
         android:layout_height="256dp"
+        android:background="@color/black"
         android:measureWithLargestChild="true"
         android:shrinkColumns="*"
         android:stretchColumns="*"
@@ -54,7 +55,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="↹"
+                android:text="Button"
                 android:textColor="@color/white" />
 
             <Button
@@ -64,8 +65,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:singleLine="false"
-                android:text="ABC"
+                android:text="@-_/"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -76,7 +76,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="DEF"
+                android:text="ABC"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -87,7 +87,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="GHI"
+                android:text="DEF"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -115,7 +115,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="Button"
+                android:text="↹"
                 android:textColor="@color/white" />
 
             <Button
@@ -125,7 +125,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="JKL"
+                android:text="GHI"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -136,7 +136,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="MNO"
+                android:text="JKL"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -147,7 +147,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="PQR"
+                android:text="MNO"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -185,7 +185,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="STU"
+                android:text="PQRS"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -196,7 +196,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="VWX"
+                android:text="TUV"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -207,7 +207,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="@string/yz"
+                android:text="WXYZ"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -235,7 +235,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="M"
+                android:text="🌐"
                 android:textColor="@color/white" />
 
             <Button
@@ -255,7 +255,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="0"
+                android:text="'&quot;:;"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -266,7 +266,7 @@
                 android:background="@drawable/button_round"
                 android:scaleX="0.95"
                 android:scaleY="0.95"
-                android:text="→"
+                android:text=".,?!"
                 android:textColor="@color/white" />
 
             <Button

@@ -7,8 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CandidateAdapter(private val context: Context) :
-    RecyclerView.Adapter<CandidateAdapter.ViewHolder>() {
+class CandidateAdapter(
+    private val context: Context,
+    private val keyboard: BaseKeyboard
+) : RecyclerView.Adapter<CandidateAdapter.ViewHolder>() {
+
     private val candidates = mutableListOf<String>()
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -36,7 +39,7 @@ class CandidateAdapter(private val context: Context) :
     }
 
     private fun handleCandidateClick(candidate: String) {
-        (context as InputMethod).handleCandidateClick(candidate)
+        keyboard.handleCandidateClick(candidate)
         clearCandidates()
     }
 

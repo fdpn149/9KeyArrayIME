@@ -6,5 +6,5 @@
         android:id="@+id/array"/>
     <include layout="@layout/english_keyboard"
         android:visibility="gone"
-        android:id="@+id/eng"/>
+        android:id="@+id/english"/>
 </FrameLayout>
