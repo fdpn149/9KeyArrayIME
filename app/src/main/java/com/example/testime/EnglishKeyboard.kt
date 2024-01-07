@@ -2,11 +2,18 @@ package com.example.testime
 
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
+import android.view.Gravity
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.FrameLayout
+import android.widget.PopupWindow
+import androidx.core.widget.PopupWindowCompat
+import kotlin.math.abs
+
 
 class EnglishKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 	BaseKeyboard(baseView, R.id.english, inputMethod) {
@@ -19,8 +26,11 @@ class EnglishKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 
 	/*Shift*/
 	private var shift = false
+	private var popupWindow: PopupWindow
 
 	init {
+		popupWindow = PopupWindow(inputMethod)
+
 		candidateLib.loadFunKeyMap(
 			mapOf(
 				"⏎" to KeyEvent.KEYCODE_NUMPAD_ENTER,
@@ -30,26 +40,41 @@ class EnglishKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 			)
 		)
 	}
-
 	override fun setupButtons() {
 		for (i in 1..20) {
 			val buttonId =
 				inputMethod.resources.getIdentifier("button$i", "id", inputMethod.packageName)
 			val button = view.findViewById<Button>(buttonId)
-			button?.setOnTouchListener { view: View, event: MotionEvent ->
-				onButtonTouch(
-					event,
-					button
-				)
+			button?.setOnTouchListener { view: View, event: MotionEvent -> onButtonTouch(event, button)
 			}
 		}
 
 	}
+	private fun makeDropDownMeasureSpec(measureSpec: Int): Int {
+		val mode: Int = if (measureSpec == ViewGroup.LayoutParams.WRAP_CONTENT) {
+			View.MeasureSpec.UNSPECIFIED
+		} else {
+			View.MeasureSpec.EXACTLY
+		}
+		return View.MeasureSpec.makeMeasureSpec(View.MeasureSpec.getSize(measureSpec), mode)
+	}
 
 	private fun onButtonTouch(event: MotionEvent, button: Button): Boolean {
 		val value = button.text.toString()
+
+		Log.d("my", inputMethod.resources.getResourceName(button.id).substringAfter('/'))
 		when (event.action) {
 			MotionEvent.ACTION_DOWN -> {
+				val popupView: View = inputMethod.layoutInflater.inflate(R.layout.key_popup, null)
+				popupWindow.contentView = popupView
+				popupWindow.width = (button.width*0.95).toInt()
+				popupView.measure(
+					makeDropDownMeasureSpec(popupWindow.width),
+					makeDropDownMeasureSpec(popupWindow.height)
+				)
+				Log.d("my", popupWindow.contentView.measuredWidth.toString())
+				PopupWindowCompat.showAsDropDown(popupWindow, button,
+					(abs(button.width*0.95-popupWindow.contentView.measuredWidth) / 2).toInt(), -popupWindow.contentView.measuredHeight - button.height, Gravity.START)
 				button.animate().scaleX(0.9f).scaleY(0.9f).alpha(0.7f).setDuration(0).start()
 				when (value) {
 					"⌫" -> handler.postDelayed(backKeyDown, DELAY_MILLIS)
@@ -68,6 +93,7 @@ class EnglishKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 			}
 
 			MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+				popupWindow.dismiss()
 				button.animate().scaleX(0.95f).scaleY(0.95f).alpha(1f).setDuration(0).start()
 				val deltaX = event.x - lastTouchX
 				val deltaY = event.y - lastTouchY
