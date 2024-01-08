@@ -34,7 +34,7 @@
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="0dp"
-        android:layout_height="256dp"
+        android:layout_height="wrap_content"
         android:background="@color/black"
         android:shrinkColumns="*"
         android:stretchColumns="*"
@@ -44,16 +44,42 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:padding="2dp">
 
                 <Button
-                    android:id="@+id/button_abc"
-                    android:layout_width="64dp"
+                    android:id="@+id/btn_und1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_round"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Button"
+                    android:textColor="@color/key_text"
+                    android:visibility="visible" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/btn_und1"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/button_round"
                     android:text="ABC"
@@ -62,7 +88,85 @@
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="1\n2\n3"
+                    android:textColor="@android:color/holo_red_light"
+                    android:visibility="visible" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/btn_und1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_round"
+                    android:text="ABC"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="1\n2\n3"
+                    android:textColor="@android:color/holo_red_light"
+                    android:visibility="visible" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/btn_und1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_round"
+                    android:text="ABC"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="1\n2\n3"
+                    android:textColor="@android:color/holo_red_light"
+                    android:visibility="visible" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/btn_und1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_round"
+                    android:text="ABC"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text="1\n2\n3"

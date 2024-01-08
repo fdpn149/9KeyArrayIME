@@ -72,7 +72,8 @@ class EnglishKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 					makeDropDownMeasureSpec(popupWindow.width),
 					makeDropDownMeasureSpec(popupWindow.height)
 				)
-				Log.d("my", popupWindow.contentView.measuredWidth.toString())
+				Log.d("my", button.width.toString() + " " + button.height.toString())
+//				Log.d("my", popupWindow.contentView.measuredWidth.toString())
 				PopupWindowCompat.showAsDropDown(popupWindow, button,
 					(abs(button.width*0.95-popupWindow.contentView.measuredWidth) / 2).toInt(), -popupWindow.contentView.measuredHeight - button.height, Gravity.START)
 				button.animate().scaleX(0.9f).scaleY(0.9f).alpha(0.7f).setDuration(0).start()

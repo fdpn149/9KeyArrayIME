@@ -2,6 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="num_key">#FF404040</color>
+    <color name="key_background">#FF404040</color>
+    <color name="key_text">#FFFFFFFF</color>
     <color name="input_view">#FF404040</color>
 </resources>
