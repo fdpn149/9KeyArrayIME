@@ -7,7 +7,6 @@ import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
-import android.widget.TableLayout
 import android.widget.TableRow
 
 class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
@@ -34,34 +33,35 @@ class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 		)
 	}
 
-	@SuppressLint("ClickableViewAccessibility")
-	override fun setupButtons() {
-		val tableLayout = view.findViewById<TableLayout>(R.id.tableLayout)
-		for (i in 0 until tableLayout.childCount) {
-			val row: TableRow = tableLayout.getChildAt(i) as TableRow
-			for (j in 0 until row.childCount) {
-				val button = (row.getChildAt(j) as FrameLayout).getChildAt(0)
-				val id = inputMethod.resources.getResourceName(button.id).substringAfter('_')
-				val type = id.substringBefore('_')
-				val name = id.substringAfter('_')
-				button.setOnTouchListener { _: View, motionEvent: MotionEvent ->
-					when (type) {
-						"fun" -> onFunButtonTouch(motionEvent, button, name)
-						"char" -> onNumButtonTouch(motionEvent, button, name)
-						else -> false
-					}
-				}
-			}
-		}
-	}
-	private fun onNumButtonTouch(motionEvent: MotionEvent, button: View, name: String): Boolean {
+	override fun onCharButtonTouch(motionEvent: MotionEvent, button: View, name: String): Boolean {
 		when (motionEvent.action) {
 			MotionEvent.ACTION_DOWN -> {
 				button.animate().scaleX(0.95f).scaleY(0.95f).alpha(0.7f).setDuration(0).start()
 				lastTouchX = motionEvent.x
 				lastTouchY = motionEvent.y
+				setPopupText("$name-", "$name^", "${name}v", name[0].toString(), "w$name")
+				showPopup(button)
 			}
+
+			MotionEvent.ACTION_MOVE -> {
+				val deltaX = motionEvent.x - lastTouchX
+				val deltaY = motionEvent.y - lastTouchY
+
+				when (getSwipeDirection(deltaX, deltaY)) {
+					SwipeDirection.UP -> setPopupText("$name^")
+					SwipeDirection.DOWN -> setPopupText("${name}v")
+					SwipeDirection.LEFT -> setPopupText(name[0].toString())
+					SwipeDirection.RIGHT -> setPopupText("w$name")
+					else -> setPopupText(
+						"$name-", "$name^", "${name}v", name[0].toString(), "w$name"
+					)
+				}
+				showPopup(button)
+			}
+
+
 			MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+				popupWindow.dismiss()
 				button.animate().scaleX(1.0f).scaleY(1.0f).alpha(1f).setDuration(0).start()
 				val deltaX = motionEvent.x - lastTouchX
 				val deltaY = motionEvent.y - lastTouchY
@@ -79,7 +79,7 @@ class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 		return true
 	}
 
-	private fun onFunButtonTouch(motionEvent: MotionEvent, button: View, name: String): Boolean {
+	override fun onFunButtonTouch(motionEvent: MotionEvent, button: View, name: String): Boolean {
 		when (motionEvent.action) {
 			MotionEvent.ACTION_DOWN -> {
 				button.animate().scaleX(0.95f).scaleY(0.95f).alpha(0.7f).setDuration(0).start()
@@ -89,6 +89,7 @@ class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 					else -> candidateLib.getKeyValue(name)?.let { sendDownKeyEvent(it, false) }
 				}
 			}
+
 			MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
 				button.animate().scaleX(1.0f).scaleY(1.0f).alpha(1f).setDuration(0).start()
 				when (name) {
