@@ -1,13 +1,11 @@
 package com.example.testime
 
-import android.annotation.SuppressLint
 import android.os.Handler
 import android.os.Looper
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
-import android.widget.TableRow
 
 class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 	BaseKeyboard(baseView, R.id.array, inputMethod) {
@@ -17,6 +15,25 @@ class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 
 	/*Handler*/
 	private val handler = Handler(Looper.getMainLooper())
+
+	val popTexts = { name: String ->
+		arrayOf(
+			"${name}-",
+			name[0].toString(),
+			"${name}^",
+			"w${name}",
+			"${name}v"
+		)
+	}
+	val outTexts = { name: String ->
+		arrayOf(
+			"${name}-",
+			name[0].toString(),
+			"${name}↑",
+			"w${name}",
+			"${name}↓"
+		)
+	}
 
 	init {
 		candidateLib.loadWords(R.raw.words)
@@ -39,22 +56,18 @@ class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 				button.animate().scaleX(0.95f).scaleY(0.95f).alpha(0.7f).setDuration(0).start()
 				lastTouchX = motionEvent.x
 				lastTouchY = motionEvent.y
-				setPopupText("$name-", "$name^", "${name}v", name[0].toString(), "w$name")
+				setPopupText(*IntRange(0, 4).map { popTexts(name)[it] }.toTypedArray())
 				showPopup(button)
 			}
 
 			MotionEvent.ACTION_MOVE -> {
 				val deltaX = motionEvent.x - lastTouchX
 				val deltaY = motionEvent.y - lastTouchY
-
-				when (getSwipeDirection(deltaX, deltaY)) {
-					SwipeDirection.UP -> setPopupText("$name^")
-					SwipeDirection.DOWN -> setPopupText("${name}v")
-					SwipeDirection.LEFT -> setPopupText(name[0].toString())
-					SwipeDirection.RIGHT -> setPopupText("w$name")
-					else -> setPopupText(
-						"$name-", "$name^", "${name}v", name[0].toString(), "w$name"
-					)
+				getSwipeDirection(deltaX, deltaY).also { dir ->
+					if (dir == SwipeDirection.NONE)
+						setPopupText(*IntRange(0, 4).map { popTexts(name)[it] }.toTypedArray())
+					else
+						setPopupText(popTexts(name)[dir.value])
 				}
 				showPopup(button)
 			}
@@ -67,12 +80,11 @@ class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 				val deltaY = motionEvent.y - lastTouchY
 				lastTouchX = 0.0f
 				lastTouchY = 0.0f
-				when (getSwipeDirection(deltaX, deltaY)) {
-					SwipeDirection.UP -> updateInputTextView("$name↑")
-					SwipeDirection.DOWN -> updateInputTextView("$name↓")
-					SwipeDirection.LEFT -> commitText(name[0].toString())
-					SwipeDirection.RIGHT -> updateInputTextView("w$name")
-					else -> updateInputTextView("$name-")
+				getSwipeDirection(deltaX, deltaY).also {
+					if (it == SwipeDirection.LEFT)
+						commitText(outTexts(name)[it.value])
+					else
+						updateInputTextView(outTexts(name)[it.value])
 				}
 			}
 		}
@@ -82,6 +94,8 @@ class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 	override fun onFunButtonTouch(motionEvent: MotionEvent, button: View, name: String): Boolean {
 		when (motionEvent.action) {
 			MotionEvent.ACTION_DOWN -> {
+				lastTouchX = motionEvent.x
+				lastTouchY = motionEvent.y
 				button.animate().scaleX(0.95f).scaleY(0.95f).alpha(0.7f).setDuration(0).start()
 				when (name) {
 					"back" -> handler.postDelayed(backKeyDown, DELAY_MILLIS)
@@ -91,10 +105,16 @@ class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 			}
 
 			MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+				val deltaX = motionEvent.x - lastTouchX
+				val deltaY = motionEvent.y - lastTouchY
+				lastTouchX = 0.0f
+				lastTouchY = 0.0f
 				button.animate().scaleX(1.0f).scaleY(1.0f).alpha(1f).setDuration(0).start()
 				when (name) {
 					"back" -> handler.removeCallbacks(backKeyDown)
-					"mode" -> changeMode()
+					"mode" -> getSwipeDirection(deltaX, deltaY).let {
+						changeMode(it.value)
+					}
 					else -> candidateLib.getKeyValue(name)?.let { sendUpKeyEvent(it, false) }
 				}
 			}

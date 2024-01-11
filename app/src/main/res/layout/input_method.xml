@@ -7,4 +7,7 @@
     <include layout="@layout/english_keyboard"
         android:visibility="gone"
         android:id="@+id/english"/>
+    <include layout="@layout/number_keyboard"
+        android:visibility="gone"
+        android:id="@+id/number"/>
 </FrameLayout>

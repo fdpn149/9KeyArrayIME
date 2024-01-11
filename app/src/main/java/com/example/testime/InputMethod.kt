@@ -9,8 +9,7 @@ class InputMethod : InputMethodService() {
 	private lateinit var baseView: FrameLayout
 	private lateinit var arrayKeyboard: ArrayKeyboard
 	private lateinit var englishKeyboard: EnglishKeyboard
-
-	private var mode = 0
+	private lateinit var numberKeyboard: NumberKeyboard
 
 	override fun onStartInputView(info: EditorInfo?, restarting: Boolean) {
 		super.onStartInputView(info, restarting)
@@ -20,12 +19,15 @@ class InputMethod : InputMethodService() {
 		baseView = layoutInflater.inflate(R.layout.input_method, null) as FrameLayout
 		arrayKeyboard = ArrayKeyboard(baseView, this)
 		englishKeyboard = EnglishKeyboard(baseView, this)
+		numberKeyboard = NumberKeyboard(baseView, this)
 		return baseView
 	}
 
-	fun changeMode() {
-		englishKeyboard.view.visibility = mode
-		mode = mode xor 8
-		arrayKeyboard.view.visibility = mode
+	fun changeMode(mode: Int) {
+		val second = (mode and 2) shr 1
+		val last = mode and 1
+		arrayKeyboard.view.visibility = second shl 3
+		englishKeyboard.view.visibility = (second.inv() or last) shl 3
+		numberKeyboard.view.visibility = (second and last).inv() shl 3
 	}
 }

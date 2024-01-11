@@ -6,10 +6,9 @@ import java.io.IOException
 import java.io.InputStream
 import java.io.InputStreamReader
 
-class CandidateLibrary(inputMethod: InputMethod) : InputMethodService() {
+class CandidateLibrary(private val inputMethod: InputMethod) : InputMethodService() {
 	data class Candidate(val input: String, val output: String)
 
-	private val inputMethod = inputMethod
 	private var candidateList = emptyList<Candidate>()
 	private var mappingTable = emptyMap<String, String>()
 	private var functionKeyMap: Map<String, Int>? = null

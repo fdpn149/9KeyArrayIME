@@ -2,14 +2,15 @@ package com.example.testime
 
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
 
 
-class EnglishKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
-	BaseKeyboard(baseView, R.id.english, inputMethod) {
+class NumberKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
+	BaseKeyboard(baseView, R.id.number, inputMethod) {
 	/*Last Touch Position*/
 	private var lastTouchX = 0.0f
 	private var lastTouchY = 0.0f
@@ -20,7 +21,8 @@ class EnglishKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 	/*Shift*/
 	private var isShifting = false
 
-	private var letterPos = arrayOf(1, 0, 4, 2, 3)
+	val numChoice = arrayOf("0⁰₀", "1¹₁", "2²₂", "3³₃", "4⁴₄", "5⁵₅", "6⁶₆", "7⁷₇","8⁸₈","9⁹₉")
+	val choicePos = arrayOf(0, 3, 1, 3, 2)
 
 	init {
 		candidateLib.loadFunKeyMap(
@@ -33,10 +35,8 @@ class EnglishKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 		)
 		candidateLib.loadSymbolList(
 			listOf(
-				listOf("@", "<", "-", ">", "_"),
-				listOf(".", "(", "'", ")", ","),
-				listOf("&", "[", "!", "]", "?"),
-				listOf(":", "{", "\"", "}", ";")
+				listOf("*"),
+				listOf("#")
 			)
 		)
 	}
@@ -47,7 +47,8 @@ class EnglishKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 				button.animate().scaleX(0.95f).scaleY(0.95f).alpha(0.7f).setDuration(0).start()
 				lastTouchX = motionEvent.x
 				lastTouchY = motionEvent.y
-				setPopupText(*letterPos.map { name.getOrNull(it)?.toString() ?: "" }.toTypedArray())
+				Log.d("my", name[0].digitToInt().toString())
+				setPopupText(*IntRange(0,4).map { numChoice[name[0].digitToInt()].getOrNull(choicePos[it])?.toString()?:"" }.toTypedArray())
 				showPopup(button)
 			}
 
@@ -55,10 +56,8 @@ class EnglishKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 				val deltaX = motionEvent.x - lastTouchX
 				val deltaY = motionEvent.y - lastTouchY
 				getSwipeDirection(deltaX, deltaY).also { dir ->
-					if (dir == SwipeDirection.NONE) setPopupText(*letterPos.map {
-						name.getOrNull(it)?.toString() ?: ""
-					}.toTypedArray())
-					else setPopupText(name.getOrNull(letterPos[dir.value])?.toString() ?: "")
+					if (dir == SwipeDirection.NONE) setPopupText(*IntRange(0,4).map { numChoice[name[0].digitToInt()].getOrNull(choicePos[it])?.toString()?:"" }.toTypedArray())
+					else setPopupText(numChoice[name[0].digitToInt()].getOrNull(choicePos[dir.value])?.toString()?:"")
 				}
 				showPopup(button)
 			}
@@ -70,10 +69,12 @@ class EnglishKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 				val deltaY = motionEvent.y - lastTouchY
 				lastTouchX = 0.0f
 				lastTouchY = 0.0f
-				val dir = getSwipeDirection(deltaX, deltaY)
-				val letter = name.getOrNull(letterPos[dir.value])
-				if (letter != null)
-					sendDownKeyEvent(letter.code - 68, isShifting)
+				getSwipeDirection(deltaX, deltaY).also{ dir ->
+					if(dir == SwipeDirection.NONE)
+						sendDownKeyEvent(name[0].code - 41, isShifting)
+					else
+						commitText(numChoice[name[0].digitToInt()].getOrNull(choicePos[dir.value])?.toString()?:"")
+				}
 			}
 		}
 		return true

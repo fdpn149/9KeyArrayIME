@@ -4,7 +4,6 @@
     android:id="@+id/gridLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:layout_gravity="center"
     android:background="#00000000">
 
@@ -103,7 +102,7 @@
                 android:layout_height="64dp"
                 android:padding="2dp">
                 <Button
-                    android:id="@+id/btn_sym_1"
+                    android:id="@+id/btn_char_1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:stateListAnimator="@null"
@@ -112,43 +111,41 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=" \u003C"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
                     android:gravity="center_horizontal|top"
-                    android:text="-"
+                    android:layout_gravity="center_horizontal|top"
+                    android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text="\> "
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
                     android:gravity="bottom|center_horizontal"
-                    android:text="_"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="\@"
+                    android:layout_gravity="center"
+                    android:text="1"
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
             </FrameLayout>
@@ -157,7 +154,7 @@
                 android:layout_height="64dp"
                 android:padding="2dp">
                 <Button
-                    android:id="@+id/btn_char_abc"
+                    android:id="@+id/btn_char_2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:stateListAnimator="@null"
@@ -166,41 +163,41 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=" a"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
                     android:gravity="center_horizontal|top"
+                    android:layout_gravity="center_horizontal|top"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text="c "
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
                     android:gravity="bottom|center_horizontal"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="b"
+                    android:layout_gravity="center"
+                    android:text="2"
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
             </FrameLayout>
@@ -209,7 +206,7 @@
                 android:layout_height="64dp"
                 android:padding="2dp">
                 <Button
-                    android:id="@+id/btn_char_def"
+                    android:id="@+id/btn_char_3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:stateListAnimator="@null"
@@ -218,41 +215,41 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=" d"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
                     android:gravity="center_horizontal|top"
+                    android:layout_gravity="center_horizontal|top"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text="f "
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
                     android:gravity="bottom|center_horizontal"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="e"
+                    android:layout_gravity="center"
+                    android:text="3"
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
             </FrameLayout>
@@ -270,45 +267,47 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
                     android:gravity="center_horizontal|top"
+                    android:layout_gravity="center_horizontal|top"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
                     android:gravity="bottom|center_horizontal"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:layout_gravity="center"
                     android:text="⌫"
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
             </FrameLayout>
+
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -370,53 +369,50 @@
                 android:layout_height="64dp"
                 android:padding="2dp">
                 <Button
-                    android:id="@+id/btn_char_ghi"
+                    android:id="@+id/btn_char_4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:stateListAnimator="@null"
                     android:layout_gravity="center"
                     android:background="@drawable/button_round" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=" g"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
                     android:gravity="center_horizontal|top"
+                    android:layout_gravity="center_horizontal|top"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text="i "
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
                     android:gravity="bottom|center_horizontal"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="h"
+                    android:layout_gravity="center"
+                    android:text="4"
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
             </FrameLayout>
@@ -425,53 +421,50 @@
                 android:layout_height="64dp"
                 android:padding="2dp">
                 <Button
-                    android:id="@+id/btn_char_jkl"
+                    android:id="@+id/btn_char_5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:stateListAnimator="@null"
                     android:layout_gravity="center"
                     android:background="@drawable/button_round" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=" j"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
                     android:gravity="center_horizontal|top"
+                    android:layout_gravity="center_horizontal|top"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text="l "
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
                     android:gravity="bottom|center_horizontal"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="k"
+                    android:layout_gravity="center"
+                    android:text="5"
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
             </FrameLayout>
@@ -480,53 +473,50 @@
                 android:layout_height="64dp"
                 android:padding="2dp">
                 <Button
-                    android:id="@+id/btn_char_mno"
+                    android:id="@+id/btn_char_6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:stateListAnimator="@null"
                     android:layout_gravity="center"
                     android:background="@drawable/button_round" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=" m"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
                     android:gravity="center_horizontal|top"
+                    android:layout_gravity="center_horizontal|top"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text="o "
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
                     android:gravity="bottom|center_horizontal"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="n"
+                    android:layout_gravity="center"
+                    android:text="6"
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
             </FrameLayout>
@@ -535,7 +525,7 @@
                 android:layout_height="64dp"
                 android:padding="2dp">
                 <Button
-                    android:id="@+id/btn_und1"
+                    android:id="@+id/btn_und2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:stateListAnimator="@null"
@@ -544,46 +534,47 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
                     android:gravity="center_horizontal|top"
+                    android:layout_gravity="center_horizontal|top"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
                     android:gravity="bottom|center_horizontal"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:layout_gravity="center"
                     android:text="Button"
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
             </FrameLayout>
+
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -631,12 +622,11 @@
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:gravity="center"
+                    android:layout_gravity="center"
                     android:text="⇧"
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
@@ -646,54 +636,50 @@
                 android:layout_height="64dp"
                 android:padding="2dp">
                 <Button
-                    android:id="@+id/btn_char_pqrs"
+                    android:id="@+id/btn_char_7"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:stateListAnimator="@null"
                     android:layout_gravity="center"
                     android:background="@drawable/button_round" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=" p"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
                     android:gravity="center_horizontal|top"
+                    android:layout_gravity="center_horizontal|top"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text="r "
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
                     android:gravity="bottom|center_horizontal"
-                    android:text="s"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="q"
+                    android:layout_gravity="center"
+                    android:text="7"
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
             </FrameLayout>
@@ -702,53 +688,50 @@
                 android:layout_height="64dp"
                 android:padding="2dp">
                 <Button
-                    android:id="@+id/btn_char_tuv"
+                    android:id="@+id/btn_char_8"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:stateListAnimator="@null"
                     android:layout_gravity="center"
                     android:background="@drawable/button_round" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=" t"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
                     android:gravity="center_horizontal|top"
+                    android:layout_gravity="center_horizontal|top"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text="v "
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
                     android:gravity="bottom|center_horizontal"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="u"
+                    android:layout_gravity="center"
+                    android:text="8"
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
             </FrameLayout>
@@ -757,54 +740,50 @@
                 android:layout_height="64dp"
                 android:padding="2dp">
                 <Button
-                    android:id="@+id/btn_char_wxyz"
+                    android:id="@+id/btn_char_9"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:stateListAnimator="@null"
                     android:layout_gravity="center"
                     android:background="@drawable/button_round" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=" w"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
                     android:gravity="center_horizontal|top"
+                    android:layout_gravity="center_horizontal|top"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text="y "
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
                     android:gravity="bottom|center_horizontal"
-                    android:text="z"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="x"
+                    android:layout_gravity="center"
+                    android:text="9"
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
             </FrameLayout>
@@ -822,46 +801,47 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
                     android:gravity="center_horizontal|top"
+                    android:layout_gravity="center_horizontal|top"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
                     android:gravity="bottom|center_horizontal"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:layout_gravity="center"
                     android:text=" "
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
             </FrameLayout>
+
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -909,13 +889,117 @@
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="🌐"
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:padding="2dp">
+                <Button
+                    android:id="@+id/btn_sym_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:stateListAnimator="@null"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_round" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:layout_gravity="center_horizontal|top"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|center_horizontal"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="🌐"
+                    android:text="*"
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:padding="2dp">
+                <Button
+                    android:id="@+id/btn_char_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:stateListAnimator="@null"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_round" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:layout_gravity="center_horizontal|top"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|center_horizontal"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="0"
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
             </FrameLayout>
@@ -930,40 +1014,36 @@
                     android:stateListAnimator="@null"
                     android:layout_gravity="center"
                     android:background="@drawable/button_round" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=" ("
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
                     android:gravity="center_horizontal|top"
-                    android:text="'"
+                    android:layout_gravity="center_horizontal|top"
+                    android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=") "
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
                     android:gravity="bottom|center_horizontal"
-                    android:text=","
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end|center_vertical"
+                    android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
 
@@ -972,121 +1052,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="."
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:padding="2dp">
-                <Button
-                    android:id="@+id/btn_sym_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:stateListAnimator="@null"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=" ["
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text="!"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text="] "
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text="?"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="\u0026"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:padding="2dp">
-                <Button
-                    android:id="@+id/btn_sym_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:stateListAnimator="@null"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=" {"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text="&quot;"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text="} "
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=";"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text=":"
+                    android:text="#"
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
             </FrameLayout>
@@ -1104,45 +1070,45 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
                     android:gravity="center_horizontal|top"
+                    android:layout_gravity="center_horizontal|top"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
                     android:gravity="bottom|center_horizontal"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:text=""
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end|center_vertical"
+                    android:text=""
+                    android:textColor="@color/key_text"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:layout_gravity="center"
                     android:text="⏎"
                     android:textColor="@color/key_text"
                     android:textSize="16sp" />
             </FrameLayout>
+
         </TableRow>
     </TableLayout>
 

@@ -18,26 +18,26 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlin.math.abs
 
 abstract class BaseKeyboard(
-	baseView: FrameLayout, id: Int, protected val inputMethod: InputMethod
+	baseView: FrameLayout, id: Int, private val inputMethod: InputMethod
 ) : InputMethodService() {
 	/*Candidate Library*/
 	protected val candidateLib = CandidateLibrary(inputMethod)
 
 	/*View*/
 	var view: ConstraintLayout = baseView.findViewById(id)
-	protected var tableLayout: TableLayout = view.findViewById(R.id.tableLayout)
+	private var tableLayout: TableLayout = view.findViewById(R.id.tableLayout)
 	private val inputView = InputView(view)
 	private var candidateRecyclerView: RecyclerView? = view.findViewById(R.id.candidateRecyclerView)
 
 	protected val popupWindow: PopupWindow = PopupWindow(inputMethod)
-	protected val popupView: View = inputMethod.layoutInflater.inflate(R.layout.key_popup, null)
+	private val popupView: View = inputMethod.layoutInflater.inflate(R.layout.key_popup, null)
 
 	companion object {
 		const val SWIPE_THRESHOLD = 50.0f
 		const val DELAY_MILLIS = 50L
 	}
 
-	val pos_id = listOf(R.id.textCenter, R.id.textStart, R.id.textTop, R.id.textEnd, R.id.textBottom)
+	private val pos_id = listOf(R.id.textCenter, R.id.textStart, R.id.textTop, R.id.textEnd, R.id.textBottom)
 	enum class SwipeDirection(val value: Int) {
 		NONE(0), LEFT(1), UP(2), RIGHT(3), DOWN(4)
 	}
@@ -90,8 +90,8 @@ abstract class BaseKeyboard(
 		return false
 	}
 
-	protected fun changeMode() {
-		inputMethod.changeMode()
+	protected fun changeMode(mode: Int) {
+		inputMethod.changeMode(mode)
 	}
 
 	protected fun deleteLastInput() {
@@ -156,7 +156,7 @@ abstract class BaseKeyboard(
 	protected fun setPopupText(
 		vararg texts: String
 	) {
-		for (i in 0 until texts.size)
+		for (i in texts.indices)
 			popupView.findViewById<TextView>(pos_id[i]).text = texts[i]
 		for (i in texts.size until 5)
 			popupView.findViewById<TextView>(pos_id[i]).text = ""
