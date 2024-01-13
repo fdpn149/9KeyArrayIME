@@ -1,6 +1,7 @@
 package com.example.testime
 
 import android.annotation.SuppressLint
+import android.content.res.Configuration
 import android.inputmethodservice.InputMethodService
 import android.view.Gravity
 import android.view.KeyEvent
@@ -43,6 +44,16 @@ abstract class BaseKeyboard(
 	}
 
 	init {
+		val orientation = inputMethod.resources.configuration.orientation
+		val dm = inputMethod.resources.displayMetrics
+		var imeHeight = when(orientation) {
+			Configuration.ORIENTATION_LANDSCAPE -> dm.heightPixels * 0.7F
+			else -> dm.heightPixels * 0.4F
+		}
+		view.layoutParams.also {
+			it.height = imeHeight.toInt()
+			view.layoutParams = it
+		}
 		candidateRecyclerView?.layoutManager =
 			LinearLayoutManager(inputMethod, RecyclerView.HORIZONTAL, false)
 		candidateRecyclerView?.adapter = CandidateAdapter(inputMethod, this)

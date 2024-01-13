@@ -1,11 +1,14 @@
 package com.example.testime
 
+import android.content.res.Configuration
 import android.os.Handler
 import android.os.Looper
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
+import android.view.ViewGroup
 import android.widget.FrameLayout
+import androidx.constraintlayout.widget.ConstraintLayout
 
 
 class EnglishKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :

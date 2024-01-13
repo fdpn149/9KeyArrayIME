@@ -20,6 +20,7 @@ class InputMethod : InputMethodService() {
 		arrayKeyboard = ArrayKeyboard(baseView, this)
 		englishKeyboard = EnglishKeyboard(baseView, this)
 		numberKeyboard = NumberKeyboard(baseView, this)
+
 		return baseView
 	}
 

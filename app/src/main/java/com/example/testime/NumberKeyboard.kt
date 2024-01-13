@@ -35,8 +35,8 @@ class NumberKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 		)
 		candidateLib.loadSymbolList(
 			listOf(
-				listOf("*"),
-				listOf("#")
+				listOf("*", "⋅", "+", "=", "`"),
+				listOf("/","⁄","|","\\", "~")
 			)
 		)
 	}
