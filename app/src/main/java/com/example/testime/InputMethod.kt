@@ -1,9 +1,12 @@
 package com.example.testime
 
 import android.inputmethodservice.InputMethodService
+import android.view.LayoutInflater
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.FrameLayout
+import androidx.databinding.DataBindingUtil
+import com.example.testime.databinding.TestBinding
 
 class InputMethod : InputMethodService() {
 	private lateinit var baseView: FrameLayout
@@ -11,12 +14,20 @@ class InputMethod : InputMethodService() {
 	private lateinit var englishKeyboard: EnglishKeyboard
 	private lateinit var numberKeyboard: NumberKeyboard
 
+	private lateinit var binding: TestBinding
+
 	override fun onStartInputView(info: EditorInfo?, restarting: Boolean) {
 		super.onStartInputView(info, restarting)
 	}
 
 	override fun onCreateInputView(): View {
-		baseView = layoutInflater.inflate(R.layout.input_method, null) as FrameLayout
+		baseView = LayoutInflater.from(this).inflate(R.layout.input_method, null) as FrameLayout
+//		baseView = layoutInflater.inflate(R.layout.input_method, null) as FrameLayout
+		binding = DataBindingUtil.inflate(layoutInflater, R.layout.test, baseView, true)
+		
+		val viewModel = Test()
+		binding.viewModel = viewModel
+		viewModel.update(40.0f)
 		arrayKeyboard = ArrayKeyboard(baseView, this)
 		englishKeyboard = EnglishKeyboard(baseView, this)
 		numberKeyboard = NumberKeyboard(baseView, this)

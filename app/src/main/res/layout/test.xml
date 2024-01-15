@@ -8,27 +8,15 @@
     </data>
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{viewModel.variable.toString()}"
-
+            android:textSize="@{viewModel.variable}"
             />
-        <include
-            android:id="@+id/array"
-            layout="@layout/array_keyboard" />
-
-        <include
-            android:id="@+id/english"
-            layout="@layout/english_keyboard"
-            android:visibility="gone" />
-
-        <include
-            android:id="@+id/number"
-            layout="@layout/number_keyboard"
-            android:visibility="gone" />
     </FrameLayout>
-
 </layout>
