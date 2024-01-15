@@ -14,7 +14,6 @@ class InputMethod : InputMethodService() {
 	private lateinit var englishKeyboard: EnglishKeyboard
 	private lateinit var numberKeyboard: NumberKeyboard
 
-	private lateinit var binding: TestBinding
 
 	override fun onStartInputView(info: EditorInfo?, restarting: Boolean) {
 		super.onStartInputView(info, restarting)
@@ -23,11 +22,7 @@ class InputMethod : InputMethodService() {
 	override fun onCreateInputView(): View {
 		baseView = LayoutInflater.from(this).inflate(R.layout.input_method, null) as FrameLayout
 //		baseView = layoutInflater.inflate(R.layout.input_method, null) as FrameLayout
-		binding = DataBindingUtil.inflate(layoutInflater, R.layout.test, baseView, true)
-		
-		val viewModel = Test()
-		binding.viewModel = viewModel
-		viewModel.update(40.0f)
+
 		arrayKeyboard = ArrayKeyboard(baseView, this)
 		englishKeyboard = EnglishKeyboard(baseView, this)
 		numberKeyboard = NumberKeyboard(baseView, this)

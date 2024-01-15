@@ -1,34 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
 
-    <data>
-        <variable
-            name="viewModel"
-            type="com.example.testime.Test" />
-    </data>
+    <include
+        android:id="@+id/array"
+        layout="@layout/array_keyboard" />
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{viewModel.variable.toString()}"
+    <include
+        android:id="@+id/english"
+        android:visibility="gone"
+        layout="@layout/english_keyboard" />
 
-            />
-        <include
-            android:id="@+id/array"
-            layout="@layout/array_keyboard" />
-
-        <include
-            android:id="@+id/english"
-            layout="@layout/english_keyboard"
-            android:visibility="gone" />
-
-        <include
-            android:id="@+id/number"
-            layout="@layout/number_keyboard"
-            android:visibility="gone" />
-    </FrameLayout>
-
-</layout>
+    <include
+        android:id="@+id/number"
+        android:visibility="gone"
+        layout="@layout/number_keyboard" />
+</FrameLayout>

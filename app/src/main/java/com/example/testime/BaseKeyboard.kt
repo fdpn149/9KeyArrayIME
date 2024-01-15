@@ -14,8 +14,10 @@ import android.widget.TableRow
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.widget.PopupWindowCompat
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.testime.databinding.TestBinding
 import kotlin.math.abs
 
 abstract class BaseKeyboard(
@@ -24,6 +26,8 @@ abstract class BaseKeyboard(
 	/*Candidate Library*/
 	protected val candidateLib = CandidateLibrary(inputMethod)
 
+
+	private lateinit var binding: TestBinding
 	/*View*/
 	var view: ConstraintLayout = baseView.findViewById(id)
 	private var tableLayout: TableLayout = view.findViewById(R.id.tableLayout)
@@ -44,6 +48,13 @@ abstract class BaseKeyboard(
 	}
 
 	init {
+		binding = DataBindingUtil.inflate(inputMethod.layoutInflater, R.layout.test, baseView, true)
+
+		val viewModel = Test()
+		binding.viewModel = viewModel
+		viewModel.update(40.0f)
+
+
 		val orientation = inputMethod.resources.configuration.orientation
 		val dm = inputMethod.resources.displayMetrics
 		var imeHeight = when(orientation) {
