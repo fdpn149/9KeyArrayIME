@@ -7,6 +7,7 @@ import android.view.Gravity
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
+import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.PopupWindow
 import android.widget.TableLayout
@@ -66,10 +67,21 @@ abstract class BaseKeyboard(
 		for (i in 0 until tableLayout.childCount) {
 			val row: TableRow = tableLayout.getChildAt(i) as TableRow
 			for (j in 0 until row.childCount) {
-				val button = (row.getChildAt(j) as FrameLayout).getChildAt(0)
-				val id = inputMethod.resources.getResourceName(button.id).substringAfter('_')
-				val type = id.substringBefore('_')
-				val name = id.substringAfter('_')
+				val frameLayout = row.getChildAt(j) as FrameLayout
+
+				var button: Button
+				var tag: String
+				if(frameLayout.getChildAt(0) is FrameLayout) {
+					button = (frameLayout.getChildAt(0) as FrameLayout).getChildAt(0) as Button
+					tag = button.tag.toString()
+				}
+				else{
+					button = frameLayout.getChildAt(0) as Button
+					tag = inputMethod.resources.getResourceName(button.id).substringAfter('_')
+				}
+
+				val type = tag.substringBefore('_')
+				val name = tag.substringAfter('_')
 
 				button.setOnTouchListener { _: View, motionEvent: MotionEvent ->
 					when (type) {

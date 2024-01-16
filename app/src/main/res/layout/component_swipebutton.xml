@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button"
+        android:tag="btn_char_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/button_round"
+        android:stateListAnimator="@null" />
+
+    <TextView
+        android:id="@+id/text_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Center"
+        android:textColor="@color/key_text"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/text_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:gravity="start|center_vertical"
+        android:text="Start"
+        android:textColor="@color/key_text"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/text_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:gravity="center_horizontal|top"
+        android:text="Top"
+        android:textColor="@color/key_text"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/text_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:gravity="end|center_vertical"
+        android:text="End"
+        android:textColor="@color/key_text"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/text_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:gravity="bottom|center_horizontal"
+        android:text="Bottom"
+        android:textColor="@color/key_text"
+        android:textSize="16sp" />
+
+</FrameLayout>

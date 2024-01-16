@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwipeButton">
+        <attr name="buttonTag" format="string" />
+        <attr name="centerText" format="string"/>
+        <attr name="startText" format="string"/>
+        <attr name="topText" format="string"/>
+        <attr name="endText" format="string"/>
+        <attr name="bottomText" format="string"/>
+
+    </declare-styleable>
+</resources>
