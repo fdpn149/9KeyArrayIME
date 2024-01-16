@@ -51,300 +51,118 @@
             android:layout_height="0dp"
             android:layout_weight="1">
 
-            <FrameLayout
+            <com.example.testime.SwipeButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="2dp">
+                android:padding="2dp" />
 
-                <Button
-                    android:id="@+id/btn_und1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="Button"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-            <FrameLayout
+            <com.example.testime.SwipeButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="2dp">
+                android:padding="2dp"
+                app:buttonTag="char_1"
+                app:centerText="1" />
 
-                <Button
-                    android:id="@+id/btn_char_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="1"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-            <FrameLayout
+            <com.example.testime.SwipeButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="2dp">
+                android:padding="2dp"
+                app:buttonTag="char_2"
+                app:centerText="2" />
 
-                <Button
-                    android:id="@+id/btn_char_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="2"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-            <FrameLayout
+            <com.example.testime.SwipeButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="2dp">
+                android:padding="2dp"
+                app:buttonTag="char_3"
+                app:centerText="3" />
 
-                <Button
-                    android:id="@+id/btn_char_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="3"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-            <FrameLayout
+            <com.example.testime.SwipeButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="2dp">
+                android:padding="2dp"
+                app:buttonTag="fun_back"
+                app:centerText="⌫" />
+        </TableRow>
 
-                <Button
-                    android:id="@+id/btn_fun_back"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
+            <com.example.testime.SwipeButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                app:buttonTag="fun_tab"
+                app:centerText="↹" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
+            <com.example.testime.SwipeButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                app:buttonTag="char_4"
+                app:centerText="4" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
+            <com.example.testime.SwipeButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                app:buttonTag="char_5"
+                app:centerText="5" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
+            <com.example.testime.SwipeButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                app:buttonTag="char_6"
+                app:centerText="6" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="⌫"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
+            <com.example.testime.SwipeButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.example.testime.SwipeButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                app:buttonTag="fun_shift"
+                app:centerText="⇧" />
+
+            <com.example.testime.SwipeButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                app:buttonTag="char_7"
+                app:centerText="7" />
+
+            <com.example.testime.SwipeButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                app:buttonTag="char_8"
+                app:centerText="8" />
+
+            <com.example.testime.SwipeButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                app:buttonTag="char_9"
+                app:centerText="9" />
+
+            <com.example.testime.SwipeButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                app:buttonTag="fun_space"
+                app:centerText=" " />
 
         </TableRow>
 
@@ -353,905 +171,40 @@
             android:layout_height="0dp"
             android:layout_weight="1">
 
-            <FrameLayout
+            <com.example.testime.SwipeButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="2dp">
+                android:padding="2dp"
+                app:buttonTag="fun_mode"
+                app:centerText="🌐" />
 
-                <Button
-                    android:id="@+id/btn_fun_tab"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="↹"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-            <FrameLayout
+            <com.example.testime.SwipeButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="2dp">
+                android:padding="2dp"
+                app:buttonTag="sym_1"
+                app:centerText="*" />
 
-                <Button
-                    android:id="@+id/btn_char_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="4"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-            <FrameLayout
+            <com.example.testime.SwipeButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="2dp">
+                android:padding="2dp"
+                app:buttonTag="char_0"
+                app:centerText="0" />
 
-                <Button
-                    android:id="@+id/btn_char_5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="5"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-            <FrameLayout
+            <com.example.testime.SwipeButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="2dp">
+                android:padding="2dp"
+                app:buttonTag="sym_2"
+                app:centerText="/" />
 
-                <Button
-                    android:id="@+id/btn_char_6"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="6"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-            <FrameLayout
+            <com.example.testime.SwipeButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="2dp">
-
-                <Button
-                    android:id="@+id/btn_und2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="Button"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp">
-
-                <Button
-                    android:id="@+id/btn_fun_shift"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="⇧"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp">
-
-                <Button
-                    android:id="@+id/btn_char_7"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="7"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp">
-
-                <Button
-                    android:id="@+id/btn_char_8"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="8"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp">
-
-                <Button
-                    android:id="@+id/btn_char_9"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="9"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp">
-
-                <Button
-                    android:id="@+id/btn_fun_space"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text=" "
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp">
-
-                <Button
-                    android:id="@+id/btn_fun_mode"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="🌐"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp">
-
-                <Button
-                    android:id="@+id/btn_sym_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="*"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp">
-
-                <Button
-                    android:id="@+id/btn_char_0"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="0"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp">
-
-                <Button
-                    android:id="@+id/btn_sym_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="/"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp">
-
-                <Button
-                    android:id="@+id/btn_fun_enter"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_round"
-                    android:stateListAnimator="@null" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"
-                    android:gravity="center_horizontal|top"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:gravity="bottom|center_horizontal"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="start|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="end|center_vertical"
-                    android:text=""
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="⏎"
-                    android:textColor="@color/key_text"
-                    android:textSize="16sp" />
-            </FrameLayout>
-
+                android:padding="2dp"
+                app:buttonTag="fun_enter"
+                app:centerText="⏎" />
         </TableRow>
     </TableLayout>
 

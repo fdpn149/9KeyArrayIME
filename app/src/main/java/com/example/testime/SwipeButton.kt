@@ -11,7 +11,7 @@ import android.widget.TextView
 
 class SwipeButton : FrameLayout {
 
-	private var buttonTag = "btn_char_1"
+	private var buttonTag = "button"
 	private var centerText = "Button"
 	private var startText = ""
 	private var topText = ""
@@ -39,9 +39,9 @@ class SwipeButton : FrameLayout {
 	private fun getValues(typedArray: TypedArray) {
 		buttonTag = typedArray.getString(R.styleable.SwipeButton_buttonTag) ?: buttonTag
 		centerText = typedArray.getString(R.styleable.SwipeButton_centerText) ?: centerText
-		startText = typedArray.getString(R.styleable.SwipeButton_startText) ?: startText
+		startText = typedArray.getString(R.styleable.SwipeButton_startText)?.let { " $it" } ?: startText
 		topText = typedArray.getString(R.styleable.SwipeButton_topText) ?: topText
-		endText = typedArray.getString(R.styleable.SwipeButton_endText) ?: endText
+		endText = typedArray.getString(R.styleable.SwipeButton_endText)?.let { "$it " } ?: endText
 		bottomText = typedArray.getString(R.styleable.SwipeButton_bottomText) ?: bottomText
 
 		typedArray.recycle()
