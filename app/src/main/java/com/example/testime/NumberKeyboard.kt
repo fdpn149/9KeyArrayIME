@@ -30,7 +30,6 @@ class NumberKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 	init {
 		val binding: NumberKeyboardBinding = DataBindingUtil.bind(view)!!
 		binding.bindVars = bindVars
-		bindVars.setValue(25.0f)
 
 		candidateLib.loadFunKeyMap(
 			mapOf(

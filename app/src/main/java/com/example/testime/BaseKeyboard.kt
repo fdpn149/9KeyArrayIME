@@ -53,8 +53,14 @@ abstract class BaseKeyboard(
 		val orientation = inputMethod.resources.configuration.orientation
 		val dm = inputMethod.resources.displayMetrics
 		val imeHeight = when(orientation) {
-			Configuration.ORIENTATION_LANDSCAPE -> dm.heightPixels * 0.7F
-			else -> dm.heightPixels * 0.4F
+			Configuration.ORIENTATION_PORTRAIT -> {
+				bindVars.setValue(dm.heightPixels * 0.006F)
+				dm.heightPixels * 0.4F
+			}
+			else -> {
+				bindVars.setValue(dm.heightPixels * 0.0096F)
+				dm.heightPixels * 0.64F
+			}
 		}
 		view.layoutParams.also {
 			it.height = imeHeight.toInt()

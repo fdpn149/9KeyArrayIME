@@ -62,35 +62,40 @@
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="2dp" />
+                    android:padding="2dp"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="char_1"
-                    app:centerText="1" />
+                    app:centerText="1"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="char_2"
-                    app:centerText="2" />
+                    app:centerText="2"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="char_3"
-                    app:centerText="3" />
+                    app:centerText="3"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="fun_back"
-                    app:centerText="⌫" />
+                    app:centerText="⌫"
+                    app:fontSize="@{bindVars.variable}" />
             </TableRow>
 
             <TableRow
@@ -103,33 +108,38 @@
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="fun_tab"
-                    app:centerText="↹" />
+                    app:centerText="↹"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="char_4"
-                    app:centerText="4" />
+                    app:centerText="4"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="char_5"
-                    app:centerText="5" />
+                    app:centerText="5"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="char_6"
-                    app:centerText="6" />
+                    app:centerText="6"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="2dp" />
+                    android:padding="2dp"
+                    app:fontSize="@{bindVars.variable}" />
             </TableRow>
 
             <TableRow
@@ -142,35 +152,40 @@
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="fun_shift"
-                    app:centerText="⇧" />
+                    app:centerText="⇧"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="char_7"
-                    app:centerText="7" />
+                    app:centerText="7"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="char_8"
-                    app:centerText="8" />
+                    app:centerText="8"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="char_9"
-                    app:centerText="9" />
+                    app:centerText="9"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="fun_space"
-                    app:centerText=" " />
+                    app:centerText=" "
+                    app:fontSize="@{bindVars.variable}" />
 
             </TableRow>
 
@@ -184,35 +199,40 @@
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="fun_mode"
-                    app:centerText="數" />
+                    app:centerText="數"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="sym_1"
-                    app:centerText="*" />
+                    app:centerText="*"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="char_0"
-                    app:centerText="0" />
+                    app:centerText="0"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="sym_2"
-                    app:centerText="/" />
+                    app:centerText="/"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="fun_enter"
-                    app:centerText="⏎" />
+                    app:centerText="⏎"
+                    app:fontSize="@{bindVars.variable}" />
             </TableRow>
         </TableLayout>
 

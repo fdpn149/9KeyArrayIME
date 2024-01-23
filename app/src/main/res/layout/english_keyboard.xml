@@ -62,7 +62,8 @@
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="2dp" />
+                    android:padding="2dp"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
@@ -72,6 +73,7 @@
                     app:buttonTag="sym_1"
                     app:centerText="\u0040"
                     app:endText="\u003E"
+                    app:fontSize="@{bindVars.variable}"
                     app:startText="\u003C"
                     app:topText="-" />
 
@@ -82,6 +84,7 @@
                     app:buttonTag="char_abc"
                     app:centerText="b"
                     app:endText="c"
+                    app:fontSize="@{bindVars.variable}"
                     app:startText="a" />
 
                 <com.example.testime.SwipeButton
@@ -91,6 +94,7 @@
                     app:buttonTag="char_def"
                     app:centerText="e"
                     app:endText="f"
+                    app:fontSize="@{bindVars.variable}"
                     app:startText="d" />
 
                 <com.example.testime.SwipeButton
@@ -98,7 +102,8 @@
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="fun_back"
-                    app:centerText="⌫" />
+                    app:centerText="⌫"
+                    app:fontSize="@{bindVars.variable}" />
             </TableRow>
 
             <TableRow
@@ -111,7 +116,8 @@
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="fun_tab"
-                    app:centerText="↹" />
+                    app:centerText="↹"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
@@ -120,6 +126,7 @@
                     app:buttonTag="char_ghi"
                     app:centerText="h"
                     app:endText="i"
+                    app:fontSize="@{bindVars.variable}"
                     app:startText="g" />
 
                 <com.example.testime.SwipeButton
@@ -129,6 +136,7 @@
                     app:buttonTag="char_jkl"
                     app:centerText="k"
                     app:endText="l"
+                    app:fontSize="@{bindVars.variable}"
                     app:startText="j" />
 
                 <com.example.testime.SwipeButton
@@ -138,12 +146,14 @@
                     app:buttonTag="char_mno"
                     app:centerText="n"
                     app:endText="o"
+                    app:fontSize="@{bindVars.variable}"
                     app:startText="m" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="2dp" />
+                    android:padding="2dp"
+                    app:fontSize="@{bindVars.variable}" />
             </TableRow>
 
             <TableRow
@@ -156,7 +166,8 @@
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="fun_shift"
-                    app:centerText="⇧" />
+                    app:centerText="⇧"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
@@ -166,6 +177,7 @@
                     app:buttonTag="char_pqrs"
                     app:centerText="q"
                     app:endText="r"
+                    app:fontSize="@{bindVars.variable}"
                     app:startText="p" />
 
                 <com.example.testime.SwipeButton
@@ -175,6 +187,7 @@
                     app:buttonTag="char_tuv"
                     app:centerText="u"
                     app:endText="v"
+                    app:fontSize="@{bindVars.variable}"
                     app:startText="t" />
 
                 <com.example.testime.SwipeButton
@@ -185,6 +198,7 @@
                     app:buttonTag="char_wxyz"
                     app:centerText="x"
                     app:endText="y"
+                    app:fontSize="@{bindVars.variable}"
                     app:startText="w" />
 
                 <com.example.testime.SwipeButton
@@ -192,7 +206,8 @@
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="fun_space"
-                    app:centerText=" " />
+                    app:centerText=" "
+                    app:fontSize="@{bindVars.variable}" />
 
             </TableRow>
 
@@ -206,7 +221,8 @@
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="fun_mode"
-                    app:centerText="英" />
+                    app:centerText="英"
+                    app:fontSize="@{bindVars.variable}" />
 
                 <com.example.testime.SwipeButton
                     android:layout_width="match_parent"
@@ -216,6 +232,7 @@
                     app:buttonTag="sym_2"
                     app:centerText="."
                     app:endText=")"
+                    app:fontSize="@{bindVars.variable}"
                     app:startText="("
                     app:topText="'" />
 
@@ -227,6 +244,7 @@
                     app:buttonTag="sym_3"
                     app:centerText="\u0026"
                     app:endText="]"
+                    app:fontSize="@{bindVars.variable}"
                     app:startText="["
                     app:topText="!" />
 
@@ -238,6 +256,7 @@
                     app:buttonTag="sym_4"
                     app:centerText=":"
                     app:endText="}"
+                    app:fontSize="@{bindVars.variable}"
                     app:startText="{"
                     app:topText="\u0022" />
 
@@ -246,7 +265,8 @@
                     android:layout_height="match_parent"
                     android:padding="2dp"
                     app:buttonTag="fun_enter"
-                    app:centerText="⏎" />
+                    app:centerText="⏎"
+                    app:fontSize="@{bindVars.variable}" />
             </TableRow>
         </TableLayout>
 
