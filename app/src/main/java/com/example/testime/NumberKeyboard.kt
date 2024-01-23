@@ -7,6 +7,9 @@ import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
+import androidx.databinding.DataBindingUtil
+import com.example.testime.databinding.ArrayKeyboardBinding
+import com.example.testime.databinding.NumberKeyboardBinding
 
 
 class NumberKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
@@ -25,6 +28,10 @@ class NumberKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 	val choicePos = arrayOf(0, 3, 1, 3, 2)
 
 	init {
+		val binding: NumberKeyboardBinding = DataBindingUtil.bind(view)!!
+		binding.bindVars = bindVars
+		bindVars.setValue(25.0f)
+
 		candidateLib.loadFunKeyMap(
 			mapOf(
 				"enter" to KeyEvent.KEYCODE_NUMPAD_ENTER,

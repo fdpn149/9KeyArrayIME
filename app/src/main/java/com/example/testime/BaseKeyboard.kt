@@ -15,8 +15,10 @@ import android.widget.TableRow
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.widget.PopupWindowCompat
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.testime.databinding.ArrayKeyboardBinding
 import kotlin.math.abs
 
 abstract class BaseKeyboard(
@@ -27,6 +29,8 @@ abstract class BaseKeyboard(
 
 	/*View*/
 	var view: ConstraintLayout = baseView.findViewById(id)
+	val bindVars = BindingVars()
+
 	private var tableLayout: TableLayout = view.findViewById(R.id.tableLayout)
 	private val inputView = InputView(view)
 	private var candidateRecyclerView: RecyclerView? = view.findViewById(R.id.candidateRecyclerView)
@@ -45,9 +49,10 @@ abstract class BaseKeyboard(
 	}
 
 	init {
+		bindVars.setValue(25.0f)
 		val orientation = inputMethod.resources.configuration.orientation
 		val dm = inputMethod.resources.displayMetrics
-		var imeHeight = when(orientation) {
+		val imeHeight = when(orientation) {
 			Configuration.ORIENTATION_LANDSCAPE -> dm.heightPixels * 0.7F
 			else -> dm.heightPixels * 0.4F
 		}
@@ -69,16 +74,8 @@ abstract class BaseKeyboard(
 			for (j in 0 until row.childCount) {
 				val frameLayout = row.getChildAt(j) as FrameLayout
 
-				var button: Button
-				var tag: String
-				if(frameLayout.getChildAt(0) is FrameLayout) {
-					button = (frameLayout.getChildAt(0) as FrameLayout).getChildAt(0) as Button
-					tag = button.tag.toString()
-				}
-				else{
-					button = frameLayout.getChildAt(0) as Button
-					tag = inputMethod.resources.getResourceName(button.id).substringAfter('_')
-				}
+				val button = (frameLayout.getChildAt(0) as FrameLayout).getChildAt(0) as Button
+				val tag = button.tag.toString()
 
 				val type = tag.substringBefore('_')
 				val name = tag.substringAfter('_')

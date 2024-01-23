@@ -6,6 +6,8 @@ import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
+import androidx.databinding.DataBindingUtil
+import com.example.testime.databinding.ArrayKeyboardBinding
 
 class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 	BaseKeyboard(baseView, R.id.array, inputMethod) {
@@ -36,6 +38,9 @@ class ArrayKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 	}
 
 	init {
+		val binding: ArrayKeyboardBinding = DataBindingUtil.bind(view)!!
+		binding.bindVars = bindVars
+
 		candidateLib.loadWords(R.raw.words)
 		candidateLib.loadMapping(R.raw.mapping)
 		candidateLib.loadFunKeyMap(

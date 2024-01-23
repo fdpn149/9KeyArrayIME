@@ -2,6 +2,7 @@
 <resources>
     <declare-styleable name="SwipeButton">
         <attr name="buttonTag" format="string" />
+        <attr name="fontSize" format="float" />
         <attr name="centerText" format="string"/>
         <attr name="startText" format="string"/>
         <attr name="topText" format="string"/>

@@ -9,6 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.databinding.DataBindingUtil
+import com.example.testime.databinding.ArrayKeyboardBinding
+import com.example.testime.databinding.EnglishKeyboardBinding
 
 
 class EnglishKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
@@ -26,6 +29,10 @@ class EnglishKeyboard(baseView: FrameLayout, inputMethod: InputMethod) :
 	private var letterPos = arrayOf(1, 0, 4, 2, 3)
 
 	init {
+		val binding: EnglishKeyboardBinding = DataBindingUtil.bind(view)!!
+		binding.bindVars = bindVars
+		bindVars.setValue(25.0f)
+
 		candidateLib.loadFunKeyMap(
 			mapOf(
 				"enter" to KeyEvent.KEYCODE_NUMPAD_ENTER,

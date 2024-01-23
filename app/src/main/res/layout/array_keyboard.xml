@@ -1,212 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/inputArea"
-    android:layout_width="match_parent"
-    android:layout_height="300dp"
-    android:layout_gravity="bottom"
-    android:background="#00000000">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:id="@+id/inputTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:background="@color/input_view"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/candidateRecyclerView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+    <data>
+        <variable
+            name="bindVars"
+            type="com.example.testime.BindingVars" />
+    </data>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/candidateRecyclerView"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:background="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputTextView">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/inputArea"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="bottom"
+        android:background="#00000000">
 
-    </androidx.recyclerview.widget.RecyclerView>
+        <TextView
+            android:id="@+id/inputTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@color/input_view"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/candidateRecyclerView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
 
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/black"
-        android:shrinkColumns="*"
-        android:stretchColumns="*"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/candidateRecyclerView">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/candidateRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputTextView">
 
-        <TableRow
-            android:layout_width="match_parent"
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:background="@color/black"
+            android:shrinkColumns="*"
+            android:stretchColumns="*"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/candidateRecyclerView">
 
-            <com.example.testime.SwipeButton
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp" />
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
-            <com.example.testime.SwipeButton
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp" />
+
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="char_1"
+                    app:fontSize="@{bindVars.variable}"
+                    app:centerText="1" />
+
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="char_2"
+                    app:centerText="2" />
+
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="char_3"
+                    app:centerText="3" />
+
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="fun_back"
+                    app:centerText="⌫" />
+            </TableRow>
+
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="char_1"
-                app:centerText="1" />
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
-            <com.example.testime.SwipeButton
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="fun_tab"
+                    app:centerText="↹" />
+
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="char_4"
+                    app:centerText="4" />
+
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="char_5"
+                    app:centerText="5" />
+
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="char_6"
+                    app:centerText="6" />
+
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp" />
+            </TableRow>
+
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="char_2"
-                app:centerText="2" />
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
-            <com.example.testime.SwipeButton
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="fun_shift"
+                    app:centerText="⇧" />
+
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="char_7"
+                    app:centerText="7" />
+
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="char_8"
+                    app:centerText="8" />
+
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="char_9"
+                    app:centerText="9" />
+
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="fun_space"
+                    app:centerText=" " />
+
+            </TableRow>
+
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="char_3"
-                app:centerText="3" />
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
-            <com.example.testime.SwipeButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="fun_back"
-                app:centerText="⌫" />
-        </TableRow>
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="fun_mode"
+                    app:centerText="中" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="fun_left"
+                    app:centerText="←" />
 
-            <com.example.testime.SwipeButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="fun_tab"
-                app:centerText="↹" />
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="char_0"
+                    app:centerText="0" />
 
-            <com.example.testime.SwipeButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="char_4"
-                app:centerText="4" />
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="fun_right"
+                    app:centerText="→" />
 
-            <com.example.testime.SwipeButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="char_5"
-                app:centerText="5" />
+                <com.example.testime.SwipeButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    app:buttonTag="fun_enter"
+                    app:centerText="⏎" />
+            </TableRow>
+        </TableLayout>
 
-            <com.example.testime.SwipeButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="char_6"
-                app:centerText="6" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <com.example.testime.SwipeButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <com.example.testime.SwipeButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="fun_shift"
-                app:centerText="⇧" />
-
-            <com.example.testime.SwipeButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="char_7"
-                app:centerText="7" />
-
-            <com.example.testime.SwipeButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="char_8"
-                app:centerText="8" />
-
-            <com.example.testime.SwipeButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="char_9"
-                app:centerText="9" />
-
-            <com.example.testime.SwipeButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="fun_space"
-                app:centerText=" " />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <com.example.testime.SwipeButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="fun_mode"
-                app:centerText="🌐" />
-
-            <com.example.testime.SwipeButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="fun_left"
-                app:centerText="←" />
-
-            <com.example.testime.SwipeButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="char_0"
-                app:centerText="0" />
-
-            <com.example.testime.SwipeButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="fun_right"
-                app:centerText="→" />
-
-            <com.example.testime.SwipeButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="2dp"
-                app:buttonTag="fun_enter"
-                app:centerText="⏎" />
-        </TableRow>
-    </TableLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
+</layout>
